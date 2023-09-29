@@ -1,0 +1,147 @@
+.Title{
+    width: 220px;
+    margin: 30px auto;
+    position: relative;
+    text-align: center;
+    font-style: normal;
+}
+body{    
+    background-color: #EBF4FA;
+	margin: 0;
+	padding: 0;
+}
+.item{
+    position: relative;
+    left:300px;
+    top:100px;
+}
+#details{
+    position: relative;
+    list-style-type: none;
+    left:250px;
+    top:-200px;
+}
+.list{
+	list-style-type: none;
+	top:-17px;
+	position: relative;
+	left:10px;
+}
+#name{
+    font-size:30px;
+}
+#layout{
+	position: relative;
+	left:10px;
+
+}
+#return{
+	position: absolute;
+	color: #306EFF;
+	left:600px;
+	font-size: 25px;
+}
+
+nav{
+	position: relative;
+	height: 50px;
+	background: #306EFF;
+	box-shadow:  0 10px 15px rgba(0,0,0,.1);
+}
+
+nav a{
+	font-size: 15px;
+	color: white;
+	text-decoration: none;
+	line-height: 50px;
+	position: relative;
+	left: 1300px;
+	z-index: 1;
+	display: inline-block;
+	text-align: center;
+}
+nav .animation{
+	position: absolute;
+	height: 100%;
+	bottom: 0;
+	z-index: 0;
+	background: #728FCE;
+	border-radius:1px;
+	transition: all .3s ease 0s;
+}
+
+a:nth-child(1){
+	width: 348px;
+}
+nav .start-home,a:nth-child(1):hover~.animation{
+	width: 100px;
+	left: 1420px;
+}
+
+
+
+.searchForm{
+    min-height: 10vh;
+    margin-top: -62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBar{
+  width: 40%;
+	border: 7px solid #728FCE;
+
+  padding: 10px;
+}
+
+.searchButton{
+    border: none;
+	  height: 50px;
+    padding: 10px 20px;
+    color: white;
+    background: #728FCE;
+    cursor: pointer;
+}
+.form-box{ /* Parent class*/
+    width: 380px;
+    height: 480px;
+    position: relative; /*always make sure that parent class is set to relative for proper positioning*/
+    margin: 6% auto;
+    background: #fff;
+    padding: 5px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 2px #5D6D7E;
+    border: 12px solid #5D6D7E;
+}
+.input-group{ /* Child class*/
+    top: 128px;
+    left: 50px; /* shift everything within this class to a certain area of the screen*/
+    position: absolute;
+    width: 280px; /* creates the maximum size for each line and pushing anything that exceeds the length on the next line*/
+    transition: .5s;
+}
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+.submit-btn{
+    width: 55%;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto;
+    border: 0;
+    outline: none;
+    background-color:  #6A5ACD;
+}
+.chkbx{
+    margin: 5px 5px 10px 0;
+}

@@ -1,0 +1,10 @@
+Install python 3.9.2
+Add python the path in "edit the system Environmental" (you can find this in the search menu of windows) by doing the following:
+	Under the advanced Tab Click "Environmental Variables" located neare the bottom of the window
+	Search for path in the second table called "system variables" click path and edit it
+	Push these two paths in
+		C:\Users\Hixs\AppData\Local\Programs\Python\Python392\
+	 	C:\Users\Hixs\AppData\Local\Programs\Python\Python392\Scripts
+
+Repeat these steps for many pythons you have installed on your system
+Note that u would have to exit visual studio and restart it after these steps are done or do these steps b4 installing visal studio code

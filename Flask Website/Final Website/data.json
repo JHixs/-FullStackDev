@@ -1,0 +1,22 @@
+[
+    
+    {
+        "Name": "Heart Pillow",
+        "Price": " $49.00",
+        "Image":"https://i.imgur.com/nvNQQuu.jpg", 
+        "Dimensions": 407
+    },
+	{
+        "Name": "Candy Pillow",
+        "Price": " $60.00",
+        "Image":"https://i.imgur.com/KRzt2Ag.jpg", 
+        "Dimensions": 407  
+    },
+	{
+        
+        "Name": "Blue Pillow",
+        "Price": " $50.00",
+        "Image":"https://i.imgur.com/ZuVBSdi.jpg", 
+        "Dimensions": 407
+    }
+]

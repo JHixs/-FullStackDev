@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+	
+  <body>
+	<div class = "navbar">
+    <nav>		
+      <a href="Contact.html">Contact Us</a>			
+       <!-- this action redirects you the app route associated with the function -->
+			<form  action="{{ url_for('RetrieveSearch') }}" class="searchForm" method="GET">	 <!-- URL is functionName -->		 
+				<input class="searchBar" name="query" type="search" placeholder="Search"/>				
+				<button class="searchButton" type="submit" >Search</button>
+			</form>
+    </nav>
+  </div>
+  <a href="{{url_for('Login')}}" id="log" >Login</a>
+  <a href="{{url_for('Signup')}}" id="sign" >Signup</a>
+  <h1> Item: {{name}} </h1>
+  
+  <form action="{{ url_for('filter') }}" method="POST">
+    <select name="sort">
+        <!--<option >Sort By</option>-->
+        <option value="Alphabically(A-Z)">Item Name: A to Z</option>
+        <option value="Alphabically(Z-A)">Item Name: Z to A</option>
+        <option value="HighestPrice">Price --> Highest</option>
+        <option value="LowestPrice">Price --> Lowest</option>
+    </select>    
+    <button type="submit">Apply filter</button>
+  </form>
+
+ <form action="{{url_for('create_post')}}" method="POST">
+  <textarea   name="postest" id="textarea" ></textarea>
+  <button type="submit">Create Post</button>
+ </form> 
+
+ <form action="{{url_for('view_posts')}}" method="GET">
+  <button type="submit">View All Posts</button>
+ </form>
+
+ 
+  <div class= "item">             
+      {% for row in Allpillows[:] %}  
+      <form action="{{url_for('main')}}" method = "POST"> 
+        <img src={{row.Image}} height=200 width=200/> 
+	      <div id = "details">
+          <!-- the "  input type="hidden" " allows u to converts the database hardcoded data into a form that acts like the data was entered by user into a textbox -->
+          <input type="hidden" value= "{{row.Name}}" name="Item_Name" >{{row.Name}} </input> 
+          <li><input type="hidden" value = "{{row.Price}}" name="Item_Price" >Cost Price:{{row.Price}} </input></li>         
+          <li><input type="hidden" value = "{{row.Dimensions}}" name="Item_Dimension">Dimensions:{{row.Dimensions}}</input></li>     
+          <button type="submit">Upload Data</button>  
+        </div>
+     </form>        
+      {% endfor %}                 
+  </div>
+
+  <div>
+    {% for comment in Allcomments[:] %}            
+      <li>{{comment.text}} ID = {{comment.id}}</li> 
+      <!--This href only works within <a> -->   
+      <!--This href allows us to link the respective data to the url function in the main -->  
+      <button> <a href="/delete-comment/{{comment.id}}" class="btn blue white-text"   >Delete Data </a> </button>                               
+    {% endfor %}
+  </div>  
+
+  <script src="../static/script.js" type="text/javascript"></script> 
+  </body>
+</html>

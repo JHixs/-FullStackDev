@@ -1,0 +1,18 @@
+@app.route("/delete-comment/<comment_id>", methods=['DELETE'])
+#@login_required
+def delete_comment(comment_id):
+    print ("Lets see what we have here: ",comment_id)
+    comment = Comments.query.filter_by(id=comment_id).first()
+    
+    db.session.delete(comment)
+    db.session.commit()
+    return "Post Deleted", 204
+
+    {% for comment in Allcomments[:] %}            
+      <li>{{comment.text}} ID = {{comment.id}}</li>
+      
+      <button href="/delete-comment/{{comment.id}}">Delete Data</button> 
+      
+                       
+  
+    {% endfor %}

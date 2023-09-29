@@ -1,0 +1,32 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+Contact
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}">
+{% endblock %}
+{% block content %}
+	
+        
+	<div id= "layout">
+		<h1> Hello {{name}} </h1>
+		<h2> About US </h2> <!-- Testing User Login Data-->
+		<p>Are you interested in sprucing up your living room, beautitifing your bedroom or electriying your entire home?</p>
+    <p>If your answer is yes, adding a few decorative cushions or pillows might just be what you need</p>
+    <p>In addition, why not add a new table cloth or table runner to your new decor.</p>
+    <p>I can help you in this area. Please call us by using any of the contact information below.</p>
+		<h2> Contact Information </h2>
+	</div>
+		<div class= "list">
+			<li> Whatsapp: 781-3938 </li>
+			<li> Email: ann.roonie@yahoo.com<li>
+			
+		</div>
+		<a href="{{url_for('main')}}" id="return" >Return to HomePage</a>
+		
+		
+	</div>        
+{% endblock %}
