@@ -1,6 +1,0 @@
-Download Nodejs
-create a "react" folder onto any hardrive (preferably not deep in)
-in cmd type
-	target drive by typing "letter of drive:",make sure you are targetting the exact location
-	"cd react" 	 
-	npm init react-app reactjs
